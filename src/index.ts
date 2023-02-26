@@ -8,6 +8,9 @@ const PATCH: string = 'PATCH';
 const PRE_RELEASE: string = 'PRE_RELEASE';
 const NUMBER_OF_COMMITS: string = 'NUMBER_OF_COMMITS';
 const NUMBER_OF_COMMITS_SINCE_TAG: string = 'NUMBER_OF_COMMITS_SINCE_TAG';
+const ANDROID_VERSION_CODE: string = 'ANDROID_VERSION_CODE';
+
+const github = require('@actions/github');
 
 process.on('unhandledRejection', handleError)
 main().catch(handleError)
@@ -24,6 +27,7 @@ async function main(): Promise<void> {
             formatSemanticValuesFromTag(tag);
         } else {
             core.setFailed(`No valid tag found: ${tag}`)
+
         }
 
     } catch (error) {
@@ -58,6 +62,7 @@ function formatSemanticValuesFromTag(tag: String) {
         tag = tag.split('v')[1];
     }
 
+    let androidVersionCode: string;
     let versionsIndicator = tag.split('.');
 
     if (versionsIndicator.length > 2 && versionsIndicator[2].includes('-')) {
@@ -65,6 +70,7 @@ function formatSemanticValuesFromTag(tag: String) {
         // Replacing PATCH split with pre release tag split
         versionsIndicator[2] = preSplit[0];
         core.exportVariable(PRE_RELEASE, preSplit[1]);
+
     } else {
         // setting empty string a pre-release
         core.exportVariable(PRE_RELEASE, '');
@@ -73,6 +79,9 @@ function formatSemanticValuesFromTag(tag: String) {
     core.exportVariable(MAJOR, versionsIndicator[0]);
     core.exportVariable(MINOR, versionsIndicator[1]);
     core.exportVariable(PATCH, versionsIndicator[2]);
+
+    androidVersionCode = versionsIndicator[0] + versionsIndicator[1].padStart(2, "0") + versionsIndicator[2].padStart(2, "0");
+    core.exportVariable(ANDROID_VERSION_CODE, androidVersionCode);
 }
 
 async function getNumberOfCommits(): Promise<void> {
