@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 124:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -48,7 +48,6 @@ const PRE_RELEASE = 'PRE_RELEASE';
 const NUMBER_OF_COMMITS = 'NUMBER_OF_COMMITS';
 const NUMBER_OF_COMMITS_SINCE_TAG = 'NUMBER_OF_COMMITS_SINCE_TAG';
 const ANDROID_VERSION_CODE = 'ANDROID_VERSION_CODE';
-const github = __nccwpck_require__(671);
 process.on('unhandledRejection', handleError);
 main().catch(handleError);
 function main() {
@@ -155,7 +154,6 @@ function handleError(err) {
 /***/ 453:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -254,7 +252,6 @@ function escapeProperty(s) {
 /***/ 115:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -555,7 +552,6 @@ exports.getState = getState;
 /***/ 403:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 // For internal use, subject to change.
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -604,7 +600,6 @@ exports.issueCommand = issueCommand;
 /***/ 375:
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 // We use any as a valid input type
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -631,7 +626,6 @@ exports.toCommandValue = toCommandValue;
 /***/ 812:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -741,7 +735,6 @@ exports.getExecOutput = getExecOutput;
 /***/ 561:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -1366,7 +1359,6 @@ class ExecState extends events.EventEmitter {
 /***/ 885:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -1575,7 +1567,6 @@ function isUnixExecutable(stats) {
 /***/ 882:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -1891,18 +1882,9 @@ function copyFile(srcFile, destFile, force) {
 
 /***/ }),
 
-/***/ 671:
-/***/ ((module) => {
-
-module.exports = eval("require")("@actions/github");
-
-
-/***/ }),
-
 /***/ 491:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("assert");
 
 /***/ }),
@@ -1910,7 +1892,6 @@ module.exports = require("assert");
 /***/ 81:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("child_process");
 
 /***/ }),
@@ -1918,7 +1899,6 @@ module.exports = require("child_process");
 /***/ 361:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("events");
 
 /***/ }),
@@ -1926,7 +1906,6 @@ module.exports = require("events");
 /***/ 147:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("fs");
 
 /***/ }),
@@ -1934,7 +1913,6 @@ module.exports = require("fs");
 /***/ 37:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("os");
 
 /***/ }),
@@ -1942,7 +1920,6 @@ module.exports = require("os");
 /***/ 17:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("path");
 
 /***/ }),
@@ -1950,7 +1927,6 @@ module.exports = require("path");
 /***/ 576:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("string_decoder");
 
 /***/ }),
@@ -1958,7 +1934,6 @@ module.exports = require("string_decoder");
 /***/ 512:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("timers");
 
 /***/ }),
@@ -1966,7 +1941,6 @@ module.exports = require("timers");
 /***/ 837:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("util");
 
 /***/ })
