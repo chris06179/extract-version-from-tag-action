@@ -31,6 +31,7 @@ async function main(): Promise<void> {
         }
 
     } catch (error) {
+        // @ts-ignore
         core.setFailed(error.message);
     }
 }
