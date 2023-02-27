@@ -10,8 +10,6 @@ const NUMBER_OF_COMMITS: string = 'NUMBER_OF_COMMITS';
 const NUMBER_OF_COMMITS_SINCE_TAG: string = 'NUMBER_OF_COMMITS_SINCE_TAG';
 const ANDROID_VERSION_CODE: string = 'ANDROID_VERSION_CODE';
 
-const github = require('@actions/github');
-
 process.on('unhandledRejection', handleError)
 main().catch(handleError)
 
