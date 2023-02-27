@@ -21,6 +21,7 @@ You will then have access to these outputs:
 - The major digit: `$MAJOR`
 - The minor digit: `$MINOR`
 - The patch digit: `$PATCH`
+- Combined Version Code (minor and patch padded with leading zeros): `$ANDROID_VERSION_CODE`
 
 - If it's a pre-release with like for exemple the `-beta1` the value `beta1` will be extracted inside `$PRE_RELEASE`. If no pre-release is found this output will be empty.
 
